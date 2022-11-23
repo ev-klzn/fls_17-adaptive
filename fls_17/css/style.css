@@ -1,0 +1,167 @@
+/* 
+&display=swap
+&subset=cyrillic-ext 
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap");
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	/* по умолчанию */
+	/* font-size: 16px;  */
+}
+
+body {
+	line-height: 1;
+	color: #fff;
+	background-color: #333;
+	font-family: "Roboto";
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ------------------------------ */
+.main {
+	flex-grow: 1;
+}
+
+/* Условные ПК, ноуты и телевизоры */
+/* 1050 из макета (контейнер + отступы) */
+@media (max-width: 1050px) {}
+
+/* Условные планшеты */
+@media (max-width: 991.98px) {}
+
+/* Условные мобилки */
+@media (max-width: 767.98px) {}
+
+
+/* Простой адаптив ---------------------------------------------------------------*/
+
+/* __container max-width: 1050px - пример размера контейнера.*/
+
+[class*="__container"] {
+	max-width: 1050px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+
+/* №1 */
+@media (max-width: 1050px) {
+	[class*="__container"] {
+		/* max-width: 970px; */
+	}
+}
+
+/* №2 */
+@media (max-width: 991.98px) {
+	[class*="__container"] {
+		/* max-width: 750px; */
+	}
+}
+
+/* №3 */
+@media (max-width: 767.98px) {
+	[class*="__container"] {
+		/* max-width: none; */
+	}
+}
+
+
+/* Простой адаптив end -----------------------------------------------------------------*/
+
+.block {
+	padding: 20px 0;
+	background-color: #794f45;
+}
+
+.block__container {}
+
+.block__items {}
+
+.block__item {
+	min-width: 150px;
+	flex: 0 1 33.333%;
+	border: 1px solid #000;
+	background-color: #7a956b;
+	margin: 0px 0px 80px 0px;
+}
+
+@media (max-width: 767.98px) {
+	.block__item {
+		margin: 0px 0px 20px 0px;
+	}
+}
+
+/* Mobile First */
+@media (min-width: 540px) {
+	.block__items {
+		display: flex;
+	}
+}
+
+/* 
+Большие экраны - 1440px
+Маленькие экраны - не меньше 1024px
+Планшеты - от 1024 до 768
+Мобильные устройства - ниже 768
+
+*/
+
+/* Не более чем или равно 1110px (меньше или равно чем 1110px) */
+@media (max-width: 1109.5px) {}
+
+/* Более сложные условия */
+/*
+@media (min-width: 479.98px) and (max-width: 767.98px) {
+	.block__item {
+		background-color: #77608d;
+		padding: 20px;
+	}
+}
+*/
