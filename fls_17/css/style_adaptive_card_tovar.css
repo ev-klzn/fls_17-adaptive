@@ -114,9 +114,9 @@ body {
 
 /* ------------------------- */
 
-.block {}
+/* .block {}*/
 
-.block__container {}
+/* .block__container {} */
 
 .block__items {
     display: flex;
@@ -151,7 +151,7 @@ body {
     /* + технический  клас _ibg*/
 }
 
-.item-block__image {}
+/* .item-block__image {} */
 
 .item-block__body {
     padding: 15px;
