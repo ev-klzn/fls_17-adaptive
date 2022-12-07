@@ -133,6 +133,7 @@ body {
 .item-block {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .item-block__picture {
@@ -145,7 +146,18 @@ body {
 
 .item-block__image {}
 
-.item-block__body {}
+.item-block__body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    flex: 1 1 100%;
+    /* позволяем увеличиваться боди */
+}
+
+.item-block__body *:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+}
 
 .item-block__title {
     font-size: 40px;
@@ -156,11 +168,12 @@ body {
     line-height: 150%;
     color: #eee;
     font-size: 16px;
+    flex: 1 1 100%;
+    /* прибиваем кнопку к низу */
 }
 
 .item-block__button {
     padding: 10px 15px;
-    display: block;
     text-align: center;
     color: #fff;
     background-color: green;
