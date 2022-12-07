@@ -54,12 +54,29 @@ body {
 .wrapper {
     min-height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    object-fit: cover;
+    /* object-position: center; */
+    /* object-position: top; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 /* -------------------- */
 
 /* 1050 из макета (контейнер + отступы) */
-@media (max-width: 1050px) {}
+@media (max-width: 1140px) {}
 
 /* Условные планшеты */
 @media (max-width: 991.98px) {}
@@ -68,13 +85,13 @@ body {
 @media (max-width: 767.98px) {}
 
 [class*="__container"] {
-    max-width: 1040px;
+    max-width: 1140px;
     margin: 0px auto;
     padding: 0px 15px;
 }
 
 /* №1 */
-@media (max-width: 1040px) {
+@media (max-width: 1140px) {
     [class*="__container"] {
         /* max-width: 970px; */
     }
@@ -118,19 +135,14 @@ body {
 }
 
 .item-block__picture {
-    position: relative;
-    padding: 0px 0px 25.74% 0px;
-    /* 260 ширина карточки по макету делим на ширину контейнера и умножаем на 100*/
-    /* 260/1010*100 */
+    padding: 0px 0px 74.285% 0px;
+    /* 1110 - 30 row-gap - 30 row-gap / 3 = ширина 350 карточки товара */
+    /* высота карточки по макету делим на ширину карточки по макету и умножаем на 100*/
+    /* 260/350*100=74,285 */
+    /* + технический  клас _ibg*/
 }
 
-.item-block__image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
+.item-block__image {}
 
 .item-block__body {}
 
