@@ -49,6 +49,7 @@ body {
     line-height: 1;
     color: #000;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(65, 64, 64);
 }
 
 .wrapper {
@@ -146,8 +147,21 @@ body {
 
 .item-block__body {}
 
-.item-block__title {}
+.item-block__title {
+    font-size: 40px;
+    color: #fff;
+}
 
-.item-block__text {}
+.item-block__text {
+    line-height: 150%;
+    color: #eee;
+    font-size: 16px;
+}
 
-.item-block__button {}
+.item-block__button {
+    padding: 10px 15px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: green;
+}
